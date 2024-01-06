@@ -1,0 +1,13 @@
+/* Write your CSS here */
+.bg-container1 {
+  background-color: blue;
+}
+.banner-image {
+  width: 80%;
+}
+.para1 {
+  font-family: 'Bree Serif';
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+}
