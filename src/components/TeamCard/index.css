@@ -1,4 +1,5 @@
-.list-container {
+/* Write your CSS here */
+.old-list-container {
   background-color: #ffffff33;
   border: 2px #475569 solid;
   border-radius: 10px;
@@ -8,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
 
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
 }
 .team-image {
@@ -25,4 +26,33 @@
 .item-link {
   text-decoration: none;
   width: 45%;
+}
+@media (max-width: 576px) {
+  .old-list-container {
+    background-color: #ffffff33;
+    border: 2px #475569 solid;
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+  }
+  .team-image {
+    height: 10vh;
+    width: 13vw;
+  }
+  .team-name {
+    color: #ffffff;
+    font-family: 'Bree Serif';
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 10px;
+  }
+  .item-link {
+    text-decoration: none;
+    width: 45vw;
+  }
 }
