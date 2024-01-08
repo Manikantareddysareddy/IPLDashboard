@@ -1,3 +1,4 @@
+// Write your code here
 import {Component} from 'react'
 
 import {Link} from 'react-router-dom'
@@ -33,13 +34,7 @@ class Home extends Component {
       <div className="bg-container">
         {isLoading ? (
           <div>
-            <Loader
-              type="Oval"
-              color="#ffffff"
-              height={50}
-              width={50}
-              className="loader"
-            />
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
           <Link to="/" className="item-links">
