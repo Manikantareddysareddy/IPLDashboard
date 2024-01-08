@@ -1,3 +1,4 @@
+// Write your code here
 import './index.css'
 
 const LatestMatch = props => {
@@ -9,22 +10,29 @@ const LatestMatch = props => {
     date,
     venue,
     competingTeam,
-    competingLogo,
+    competingTeamLogo,
     firstInnings,
     secondInnings,
     matchStatus,
   } = match
   return (
     <li className="list-container1">
-      <div className="first-container">
-        <h1 className="heading1">TeamName</h1>
-        <p className="paras">{date}</p>
-        <p className="paras">{venue}</p>
-        <p className="paras">{result}</p>
+      <div className="new-container">
+        <div className="first-container">
+          <p className="heading1">{competingTeam}</p>
+          <p className="paras">{date}</p>
+          <p className="paras">{venue}</p>
+          <p className="paras">{result}</p>
+        </div>
+        <div className="image-container">
+          <img
+            src={competingTeamLogo}
+            alt={`latest match ${competingTeam}`}
+            className="new-team-image"
+          />
+        </div>
       </div>
-      <div className="image-container">
-        <h1 className="heading1">TeamImage</h1>
-      </div>
+
       <div className="second-container">
         <h1 className="heading1">First Innings</h1>
         <p className="paras">{firstInnings}</p>
