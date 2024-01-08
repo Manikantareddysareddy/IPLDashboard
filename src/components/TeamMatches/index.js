@@ -1,3 +1,4 @@
+// Write your code here
 import {Component} from 'react'
 
 import Loader from 'react-loader-spinner'
@@ -5,6 +6,8 @@ import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
 
 import MatchCard from '../MatchCard'
+
+import './index.css'
 
 class TeamMatches extends Component {
   state = {bannerImage: '', latestMatch: {}, recentMatch: [], isLoading: true}
@@ -63,19 +66,19 @@ class TeamMatches extends Component {
       <div className="bg-container1">
         {isLoading ? (
           <div>
-            <Loader
-              type="Oval"
-              color="#ffffff"
-              height={50}
-              width={50}
-              className="loader"
-            />
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />{' '}
           </div>
         ) : (
-          <div>
+          <div className="rcb">
             <img src={bannerImage} className="banner-image" alt="team banner" />
+
             <p className="para1">Latest Matches</p>
             <LatestMatch match={latestMatch} />
+            <ul className="ul-recent-container ">
+              {recentMatch.map(RecentMatch => (
+                <MatchCard matchItem={RecentMatch} key={RecentMatch.id} />
+              ))}
+            </ul>
           </div>
         )}
       </div>
